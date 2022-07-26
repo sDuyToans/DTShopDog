@@ -1,0 +1,48 @@
+<%- layout('layout/boilerplate') %> 
+    <div class="col-md-6 offset-md-3" style="margin-top: 70px;">
+        <div class="card">
+            <div class="card-body">
+                    <h1 class="text-center text-success">REGISTER</h1>
+                  <form action="/register" method="POST" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                      <label for="username" class="form-label">UserName</label>
+                      <input type="text" class="form-control" id="username" aria-describedby="username" name="username" required>
+                      <div id="emailHelp" class="form-text">We'll gonna display this name!.</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Do not allow empty!
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback">
+                        Do not allow empty!
+                    </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPassword5" class="form-label">Password</label>
+                        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" name="password" required>
+                        <div id="passwordHelpBlock" class="form-text">
+                          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                        </div>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                          Do not allow empty!
+                      </div>
+                    </div>
+                    <div class="d-grid g-2">
+                        <button class="btn btn-primary btn-lg">Create</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>

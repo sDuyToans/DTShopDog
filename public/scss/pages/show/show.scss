@@ -1,0 +1,134 @@
+@import '../../themes/variable';
+
+body {
+    background-color: rgb(250, 250, 250);
+
+    .text-success {
+        color: $text-dark  !important;
+        margin-top: 50px;
+    }
+
+    .row {
+        .col-md-8 {
+            .card {
+                -webkit-box-shadow: 10px 10px 13px 0px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 10px 10px 13px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 10px 10px 13px 0px rgba(0, 0, 0, 0.75);
+
+                .carousel {
+                    .carousel-inner {
+                        .carousel-item {
+                            img {
+                                object-fit: cover;
+                            }
+                        }
+                    }
+
+                    .carousel-control-prev {
+                        .carousel-control-prev-icon {}
+
+                        .visually-hidden {}
+                    }
+
+                    .carousel-control-next {
+                        .carousel-control-next-icon {}
+
+                        .visually-hidden {}
+                    }
+                }
+
+                .card-body {
+                    .card-title {}
+                }
+
+                .list-group {
+                    .list-group-item {
+                        b {
+                            font-size: $f2x-size;
+                        }
+
+                        .dog-age {
+                            font-size: 17px;
+                            font-weight: 500;
+                        }
+
+                        .dog-loca {}
+
+                        .dog-descrip {}
+
+                        .dog-price {
+                            color: green;
+                            font-size: $f4x-size;
+                        }
+                    }
+                }
+
+                .control {
+                    .col-md-4 {
+                        .btn-edit {
+                            a {
+                                // padding: 10px 20px;
+                            }
+                        }
+                    }
+
+                    .col-md-4 {
+                        .btn-delete {
+                            form {
+                                button {
+                                    //  padding: 10px 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    .col-md-4 {
+                        .btn-goback {
+                            a {
+                                // padding: 10px 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .col-md-4 {
+            .card {
+                .card-header {
+                    h3 {}
+                }
+
+                .card-body {
+                    form {
+                        .form-floating {
+                            .form-control {}
+
+                            .valid-feedback {}
+
+                            .invalid-feedback {}
+                        }
+
+                        .btn-addcmt {}
+                    }
+                }
+
+                .list-group {
+                    .list-group-item {
+                        div {
+                            h6 {}
+
+                            p {}
+
+                            .d-grid {
+                                form {
+                                    button {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import '../../themes/variable';
+body{
+    .navbar-fixed-top.scrolled {
+        background-color: transparent !important;
+        transition: background-color 200ms linear;
+        .nav-link{
+            color: $text-dark !important;
+        }
+        h5{
+            color: $text-main;
+        }
+      }
+    .navbar {
+        padding: 0.5rem 50px;
+
+        .container-fluid {
+            .navbar-brand {
+                display: flex;
+
+                h5 {
+                    display: flex;
+                    align-items: center;
+                    font-size: $f2x-size;
+                    margin-bottom: 0px;
+                    margin-right: 10px;
+                }
+
+                img {
+                   @include resizeLogo;
+                }
+            }
+
+            .navbar-toggler {
+                .navbar-toggler-icon {}
+            }
+
+            .collapse {
+                .navbar-nav {
+                    .nav-link {
+                        color: $text-white;
+                        &::before{
+                            content: '';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

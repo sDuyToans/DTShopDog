@@ -1,0 +1,30 @@
+//font-size
+$normally-size: 16px;
+$f2x-size: 20px;
+$f3x-size: 30px;
+$f4x-size: 40px;
+$f5x-size: 50px;
+$f6x-size: 60px;
+$f7x-size: 70px;
+$f8x-size: 80px;
+
+//text-color
+$text-main: #006954;
+$text-white: #fff;
+$text-dark : #000;
+
+//icon-color
+$icon-main: #006954;
+//background-color
+$background-main: #006954;
+ 
+//logo resize 
+@mixin resizeLogo($imgheight: 50px, $imgwidth: 50px,  $imgbdradius: 50%) {
+    height: $imgheight;
+    width: $imgwidth;
+    border-radius: $imgbdradius;
+}
+
+
+
+

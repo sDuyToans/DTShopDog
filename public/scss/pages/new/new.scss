@@ -1,0 +1,143 @@
+@import '../../themes/variable';
+
+.row{
+    margin-top: 50px;
+    .text-title{
+        color: $text-main;
+        margin-bottom: 30px;
+    }
+    .card{
+        .card-body{
+            .needs-validation{
+
+            }
+            .dog-name{
+                label{
+
+                }
+                input{
+
+                }
+                .valid-feedback{
+
+                }
+                .invalid-feedback{
+
+                }
+            }
+            .dog-location{
+                label{
+
+                }
+                input{
+
+                }
+                .valid-feedback{
+
+                }
+                .invalid-feedback{
+
+                }
+            }
+            .dog-breed{
+                label{
+
+                }
+                input{
+
+                }
+                .valid-feedback{
+
+                }
+                .invalid-feedback{
+
+                }
+            }
+            .dog-age{
+                label{
+
+                }
+                input{
+
+                }
+                .valid-feedback{
+
+                }
+                .invalid-feedback{
+
+                }
+            }
+            .dog-des{
+                label{
+
+                }
+                input{
+
+                }
+                .valid-feedback{
+
+                }
+                .invalid-feedback{
+
+                }
+            }
+            .dog-price{
+                label{
+
+                }
+                input{
+
+                }
+                .valid-feedback{
+
+                }
+                .invalid-feedback{
+
+                }
+            }
+            .dog-img{
+                label{
+
+                }
+                input{
+
+                }
+                .valid-feedback{
+
+                }
+                .invalid-feedback{
+
+                }
+            }
+            .btn-addnew{
+                button{
+
+                }
+            }
+        }
+    }
+    .div-back{
+        position: absolute;
+        .btn-backall{
+            background-color: $background-main;
+            padding: 30px;
+            color: $text-white;
+            &:hover{
+                animation: zoomInOut 0.7s;
+            }
+    }
+    }
+}
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

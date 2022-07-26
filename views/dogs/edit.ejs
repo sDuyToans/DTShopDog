@@ -1,0 +1,101 @@
+<%- layout('layout/boilerplate') %> 
+<div class="row">
+    <h1 class="text-center">Edit Your Dog Infor</h1>
+    <div class="row card">
+      <div class="col-md-12 card-body">
+        <form action="/dogs/<%=dog._id%>?_method=PUT" method="POST" class="needs-validation row" novalidate enctype="multipart/form-data">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label class="form-label" for="name">Dog's name</label>
+                  <input class="form-control" type="text" id="name" name="dogs[name]" value="<%= dog.name %>" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  <div class="invalid-feedback">
+                      Do not allow empty!
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label" for="location">Location</label>
+                  <input class="form-control" type="text" id="location" name="dogs[location]" value="<%=dog.location%>" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Do not allow empty!
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label" for="type">Type</label>
+                  <input class="form-control" type="text" id="type" name="dogs[type]" value="<%=dog.type%>" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Do not allow empty!
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label" for="age">Age</label>
+                  <input class="form-control" type="number" id="age" name="dogs[age]" value="<%=dog.age%>" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Do not allow empty!
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label" for="description">Description</label>
+                  <input class="form-control" type="text" id="description" name="dogs[description]" value="<%=dog.description%>" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                      Do not allow empty!
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label for="price" class="form-label">Price</label>
+                  <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" name="dogs[price]" id="price" value="<%=dog.price%>" required>
+                      <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                          Do not allow empty!
+                      </div>
+                  </div>
+                </div>
+              <div class="mb-3">
+                  <label for="image" class="input-group mb-2">Images</label>
+                  <input type="file" class="form-control" id="image" name="image" multiple>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <div class="card">
+                      <% dog.images.forEach((img, i) =>{ %>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="images-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
+                          <!-- deleteImages[] de thiet lap joyschema dung de xoa anh tren cloudinary cai ma se chua(pathname chinh la filename cua chung ta va chung ta dung cai ten nay de xoa tren cloudinary) -->
+                          <label class="form-check-label" for="images-<%=i%>">
+                            Click if u want to delete this under pic!
+                          </label>
+                        </div>
+                        <img src="<%=img.url%>" alt="" class="img-thumbnail mb-3">
+                      <% }) %> 
+                  </div>
+                </div>
+              </div>
+            <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-success">EDIT</button>
+              </div>
+            <div class="d-grid gap-2 mb-3">
+                <a href="/dogs" class="btn btn-info">BACK TO ALL DOGS</a>
+              </div>
+        </form>
+    </div>
+    </div>
+</div>

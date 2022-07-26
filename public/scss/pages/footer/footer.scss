@@ -1,0 +1,105 @@
+@import '../../themes/variable';
+
+footer{
+    .container{
+        .row{
+            .top-footer{
+                padding: 20px 0;
+                align-items: flex-start;
+                .logo-footer{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img{
+                        @include resizeLogo(100px, 100px, );
+                        margin-bottom: 10px;
+                    }
+                    .logo-desc{
+                        color: $text-white;
+                        text-align: center;
+                        b{
+                            color: $text-main;
+                        }
+                    }
+                }
+                .follow-footer{
+                    .text-follow{
+                        color: $text-white;
+                        font-size: $f3x-size;
+                        text-align: center;
+                    }
+                    .icon-follow{
+                        display: flex;
+                        gap: 20px;
+                        justify-content: center;
+                        i{
+                            color: $icon-main;
+                            font-size: 30px;
+                            &:hover{
+                                animation: zoomInIcon 0.5s;
+                                color: #cc6699;
+                                transition: all 0.3s linear;
+                            }
+                        }
+                    }
+                }
+                .call-footer{
+                    .text-call{
+                        font-size: $f3x-size;
+                        color: $text-white;
+                        text-align: center;
+                    }
+                    .phone-number{
+                        text-align: center;
+                       strong{
+                        a{
+                            text-decoration: none;
+                            color: $text-white;
+                            font-size: $f2x-size;
+                            &:hover{
+                                color: $icon-main;
+                                transition: all 0.3s linear;
+                            }
+                        }
+                       }
+                    }
+                }
+                .sub-footer{
+                    .text-sub{
+                        color: $text-white;
+                        font-size: 25px;
+                    }
+                    .sub-email{
+                        margin-bottom: 1rem;
+                        input{
+                            width: 100%;
+                            padding: 10px;
+                            outline: none;
+                        }
+                    }
+                    .sub-button{
+                        padding: 10px;
+                        border: none;
+                        &:hover{
+                            background-color: #cc6699;
+                        }
+                    }
+                }
+            }
+            .bottom-footer{
+                text-align: center;
+                span{
+                }
+            }
+        }
+    }
+}
+
+@keyframes zoomInIcon{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}

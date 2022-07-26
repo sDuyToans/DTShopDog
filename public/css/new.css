@@ -1,0 +1,30 @@
+.row {
+  margin-top: 50px;
+}
+.row .text-title {
+  color: #006954;
+  margin-bottom: 30px;
+}
+.row .div-back {
+  position: absolute;
+}
+.row .div-back .btn-backall {
+  background-color: #006954;
+  padding: 30px;
+  color: #fff;
+}
+.row .div-back .btn-backall:hover {
+  animation: zoomInOut 0.7s;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

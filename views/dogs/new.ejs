@@ -1,0 +1,93 @@
+<% layout('layout/boilerplate') %>
+<link rel="stylesheet" href="/css/new.min.css">
+    <div class="row position-relative">
+        <h1 class="text-center text-title">List New Dog</h1>
+        <div class="card col-md-6 offset-md-3">
+            <div class="card-body">
+                    <form action="/dogs" method="POST" class="needs-validation" novalidate enctype="multipart/form-data">
+                        <div class="mb-3 dog-name">
+                            <label class="form-label" for="name">Dog's name</label>
+                            <input class="form-control" type="text" id="name" name="dogs[name]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                              <div class="invalid-feedback">
+                                Do not allow empty!
+                            </div>
+                        </div>
+                        <div class="mb-3 dog-location">
+                            <label class="form-label" for="location">Location</label>
+                            <input class="form-control" type="text" id="location" name="dogs[location]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                              <div class="invalid-feedback">
+                                Do not allow empty!
+                            </div>
+                        </div>
+                        <div class="mb-3 dog-breed">
+                            <label class="form-label" for="type">Type</label>
+                            <input class="form-control" type="text" id="type" name="dogs[type]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                              <div class="invalid-feedback">
+                                Do not allow empty!
+                            </div>
+                        </div>
+                        <div class="mb-3 dog-age">
+                            <label class="form-label" for="age">Age</label>
+                            <input class="form-control" type="text" id="age" name="dogs[age]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                              <div class="invalid-feedback">
+                                Do not allow empty!
+                            </div>
+                        </div>
+                        <div class="mb-3 dog-des">
+                            <label class="form-label" for="description">Description</label>
+                            <input class="form-control" type="text" id="description" name="dogs[description]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                              <div class="invalid-feedback">
+                                Do not allow empty!
+                            </div>
+                        </div>
+                        <div class="mb-3 dog-price">
+                            <label for="price" class="form-label">Price</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" name="dogs[price]" id="price" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
+                                  <div class="invalid-feedback">
+                                    Do not allow empty!
+                                </div>
+                            </div>
+                          </div>
+                        <div class="mb-3 dog-img">
+                            <label for="image" class="form-label">Images</label>
+                            <input type="file" class="form-control" name="image" id="image" required multiple>
+                            <div class="valid-feedback">
+                                Looks good!
+                              </div>
+                              <div class="invalid-feedback">
+                                Do not allow empty!
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 mb-3 btn-addnew">
+                            <button class="btn btn-success">Add New Dog</button>
+                          </div>
+                    </form>
+            </div>
+        </div>
+        <div class="mb-3 div-back">
+            <a href="/dogs" class="btn btn-info btn-backall">BACK TO ALL DOGS
+            </a>
+            
+        </div>
+    </div>
+    

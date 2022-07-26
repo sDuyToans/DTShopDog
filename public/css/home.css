@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://img.huffingtonpost.com/asset/5aec37bc1a00004300cdda8a.jpeg?cache=u08bmpu20f&ops=1910_1000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+body .cover-container header nav {
+  margin: 0px 50px;
+}
+body .cover-container header nav .container-fluid .navbar-brand img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+body .cover-container header nav .container-fluid .collapse .navbar-nav .nav-link {
+  padding: 5px 0px;
+  margin-left: 20px;
+  border-bottom: 5px solid transparent;
+}
+body .cover-container header nav .container-fluid .collapse .navbar-nav .nav-link:hover {
+  border-color: #fff;
+  transition: border-color 0.3s linear;
+}
+body .cover-container .text-introduce figure blockquote .main-shopName {
+  font-size: 50px;
+}
+body .cover-container .text-introduce figure blockquote img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+body .cover-container .text-introduce figure blockquote .wc-shoptext {
+  font-size: 30px;
+}
+body .cover-container .text-introduce .btn-showAll {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+body .cover-container .text-introduce .btn-showAll a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}

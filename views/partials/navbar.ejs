@@ -1,0 +1,28 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary fixed-top navbar-fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="/">
+      <h5>DTShop</h5>
+      <img src="https://images-platform.99static.com//N4VUoRJLktkazbY_0VENbLXlRyI=/13x0:1589x1576/fit-in/500x500/99designs-contests-attachments/98/98546/attachment_98546587" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link " href="/">Home</a>
+        <a class="nav-link " href="/dogs">All Dogs</a>
+        <a class="nav-link " href="/dogs/new">List New Dog</a>
+      </div>
+        <div class="navbar-nav ms-auto">
+          <% if(!currentUser) { %> 
+          <a href="/login" class="nav-link ">Login</a>
+          <a href="/register" class="nav-link ">Register</a>
+          <% } else { %> 
+          <a href="#" class="nav-link "><%= currentUser.username %></a>
+          <a href="/logout" class="nav-link ">Logout</a>
+          <% } %> 
+        </div>
+    </div>
+  </div>
+</nav>

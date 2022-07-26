@@ -1,0 +1,86 @@
+@use '../../base/base';
+@import '../../themes/variable';
+
+body{
+    height: 100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://img.huffingtonpost.com/asset/5aec37bc1a00004300cdda8a.jpeg?cache=u08bmpu20f&ops=1910_1000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    .cover-container{
+        header{
+            nav{
+                margin: 0px 50px;
+                .container-fluid{
+                    .navbar-brand{
+                        strong{
+
+                        }
+                        img{
+                            height: 80px;
+                            width: 80px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .navbar-toggle{
+                        span{
+
+                        }
+                    }
+                    .collapse{
+                        .navbar-nav{
+                            .nav-link{
+                                padding: 5px 0px;
+                                margin-left: 20px;
+                                border-bottom: 5px solid transparent;
+                                &:hover{
+                                    border-color: #fff;
+                                    transition: border-color 0.3s linear;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .text-introduce{
+            figure{
+                blockquote{
+                    .main-shopName{
+                        font-size: $f5x-size;
+                    }
+                    img{
+                        height: 120px;
+                        width: 120px;
+                        border-radius: 50%;
+                        margin-bottom: 20px;
+                    }
+                    .wc-shoptext{
+                        font-size: $f3x-size;
+                    }
+                }
+                figcaption{
+                    cite{
+
+                    }
+                }
+            }
+            .btn-showAll{
+                padding-top: 15px;
+                padding-bottom: 15px;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: $f2x-size;
+                }
+            }
+        }
+    }
+    footer{
+        .container{
+            span{
+
+            }
+        }
+    }
+}

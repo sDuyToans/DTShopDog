@@ -1,0 +1,110 @@
+<% layout('layout/boilerplate') %>
+    <link rel="stylesheet" href="/css/show.min.css">
+    <h1 class="text-center mb-3 text-success">Dog's name: <%=dog.name%>
+    </h1>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-3">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <% dog.images.forEach((img, i)=>{ %>
+                            <div class="carousel-item <%= i === 0 ? 'active': '' %>">
+                                <img src="<%= img.thumbnail %>" class="d-block w-100" alt="...">
+                            </div>
+                            <% }) %>
+                    </div>
+                    <% if(dog.images.length> 1) {%>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        <% } %>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-muted">Breed: <%= dog.type %>
+                    </h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Listed by: <b>
+                            <%= dog.author.username %>
+                        </b>
+                    </li>
+                    <li class="list-group-item">Age: <span class="dog-age"><%= dog.age %></span>
+                    </li>
+                    <li class="list-group-item">Location: <span class="dog-loca"><%= dog.location %></span>
+                    </li>
+                    <li class="list-group-item">Description: <span class="dog-descrip"><%= dog.description %></span>
+                    </li>
+                    <li class="list-group-item d-grid ">Price: <span class="dog-price">$ <%= dog.price %></span>
+                    </li>
+                </ul>
+                <% if(currentUser) {%>
+                    <div class="row gy-0 gx-0 control mb-1">
+                        <div class="col-md-4">
+                            <a href="/dogs/<%= dog._id %>/edit" class="btn btn-primary d-grid h-100">EDIT</a>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="d-grid " action="/dogs/<%= dog._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-danger">DELETE THIS INFO</button>
+                            </form>
+                        </div>
+                        <% } %>
+                            <div class="col-md-4">
+                                <a href="/dogs" class="btn btn-info d-grid ">BACK TO ALL DOG</a>
+                            </div>
+                    </div>
+            </div>
+         
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Leave your comments here to discuss ^^</h3>
+                </div>
+                <div class="card-body mb-3">
+                    <form action="/dogs/<%=dog._id%>/discuss" method="POST" class="needs-validation" novalidate>
+                        <div class="form-floating mb-2">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                                name="discuss[comment]" required></textarea>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Do not allow empty!
+                            </div>
+                            <label for="floatingTextarea">Your Comments</label>
+                        </div>
+                        <button class="btn btn-success btn-addcmt">Add Comments</button>
+                    </form>
+                </div>
+
+                <ul class="list-group">
+                    <% for (let discuss of dog.discusses) { %>
+                        <li class="list-group-item">
+                            <div>
+                                <h6 class="text-success">Submitted by: <%=discuss.author.username %>
+                                </h6>
+                                <p>
+                                    <%=discuss.comment%>
+                                </p>
+                                <div class="d-grid d-md-flex justify-content-md-end ">
+                                    <% if(currentUser) { %>
+                                        <form action="/dogs/<%=dog._id%>/discuss/<%=discuss._id%>?_method=DELETE"
+                                            method="POST">
+                                            <button class="btn btn-danger">DELETE</button>
+                                        </form>
+                                        <% } %>
+                                </div>
+                            </div>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
